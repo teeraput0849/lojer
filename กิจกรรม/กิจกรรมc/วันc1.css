@@ -1,0 +1,336 @@
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: #000000; /* สีพื้นหลังดำน้ำเงินแบบ IT */
+    color: #000000;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #081b69, #1b0ca1, #00ffff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+
+/* จัดเลย์เอาต์รูปภาพ */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* สไตล์ Card และ Animation การขยับ */
+.card {
+    background: #104ac5;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%);
+    transition: 0.5s;
+}
+
+/* Hover Effect: เมื่อเอาเมาส์วางแล้วรูปจะขยายและชัดขึ้น */
+.card:hover {
+    transform: translateY(-15px) scale(1.03);
+    border-color: #58a6ff;
+    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.3);
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    background: #ffffff;
+}
+
+/* Animation ตอนเปิดเว็บ (Fade In Up) */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* หน่วงเวลาการขึ้นของแต่ละรูปให้ดูมีมิติ */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ตั้งค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+     margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: #ffffff; /* สีพื้นหลังดำน้ำเงินแบบ IT */
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+        .navbar {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            
+        }
+
+        /* สไตล์ของปุ่มเมนูหลัก */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: #2c3e50;
+            padding: 14px 25px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        /* ส่วนของเนื้อหาย่อย (Dropdown Content) - ซ่อนไว้ตอนแรก */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-top: 2px solid #3498db; /* เส้นสีแดงด้านบนตามสถาบัน */
+        }
+
+        /* สไตล์ของรายการย่อย */
+        .dropdown-content a {
+            float: none;
+            color: #555;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ที่รายการย่อย */
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: #3498db;
+            padding-left: 20px; /* ขยับเล็กน้อยเพื่อความสวยงาม */
+        }
+
+        /* แสดงเมนูย่อยเมื่อเอาเมาส์ไปชี้ที่เมนูหลัก (Hover) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar1{
+             background-color: #fff;
+            overflow: hidden;
+            display: flex;
+        }
+        .dropdown2{
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown2 .dropbtn3 {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            padding: 14px 1px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        .dropbtn3:hover{
+          display: block;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* การจัดเรียง Grid 2 แถว */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+    gap: 20px;
+    max-width: 1000px;
+    padding: 20px;
+}
+/* Animation ตอนเปิดเว็บ (Fade In & Slide Up) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* เพิ่มดีเลย์ให้รูปภาพค่อยๆ ขึ้นทีละนิด */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(56, 189, 248, 0.8);
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+
+/* ปรับแต่งให้รองรับมือถือ (เหลือ 1 แถวถ้าจอน้อยกว่า 600px) */
+@media (max-width: 600px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
