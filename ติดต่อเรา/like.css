@@ -1,0 +1,304 @@
+/* CSS Reset & Base Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fin {
+            background-color: #0d1117; /* สีพื้นหลังเข้มแบบ GitHub */
+            color: #e6edf3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Container หลัก */
+        .contact-container {
+            width: 90%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: rgba(22, 27, 34, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        /* ฝั่งข้อมูลการติดต่อ */
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: #58a6ff; /* สีฟ้า IT */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+            color: #8b949e;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item .icon {
+            width: 40px;
+            height: 40px;
+            background: #1f6feb;
+            border-radius: 8px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* ฝั่ง Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #58a6ff;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #fff;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #58a6ff;
+            box-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+        }
+
+        .btn-submit {
+            background: #0d44da; /* สีเขียวแบบปุ่ม Commit */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            
+            
+        }
+
+        .btn-submit:hover {
+            background: #2ea043;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .vob{
+            margin-left: 5%;
+        }
+        
+    
+
+.soker {
+  /* การจัดวางตำแหน่ง */
+  position: absolute; /* หรือใช้ fixed ถ้าอยากให้ปุ่มค้างอยู่แม้จะเลื่อนหน้าจอลงมา */
+  top: 20px;          /* ห่างจากขอบบน */
+  left: 20px;         /* ห่างจากขอบซ้าย */
+  font-size: 24px;
+    font-weight: 600;
+    color: #fdfdfd;
+  /* การตกแต่งรูปลักษณ์ */
+  padding: 12px 24px;
+  background-color: #007bff; /* สีน้ำเงิน */
+  color: white;              /* สีตัวอักษร */
+  text-decoration: none;     /* เอาเส้นใต้ลิงค์ออก */
+  border-radius: 50px;       /* ทำขอบมนแบบวงรี */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้นุ่มนวล */
+  transition: all 0.3s ease;  /* เพิ่ม animation เวลาเอาเมาส์ไปวาง */
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) */
+.soker:hover {
+  background-color: #0056b3; /* สีเข้มขึ้นตอนชี้ */
+  transform: translateY(-2px); /* ปุ่มลอยขึ้นนิดนึง */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* ตั้งค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+
+        /* ตั้งค่าฟอนต์และการจัดวางพื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* ส่วนของแถบเมนูหลัก */
+        .navbar {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            
+        }
+
+        /* สไตล์ของปุ่มเมนูหลัก */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: #2c3e50;
+            padding: 14px 25px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        /* ส่วนของเนื้อหาย่อย (Dropdown Content) - ซ่อนไว้ตอนแรก */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-top: 2px solid #3498db; /* เส้นสีแดงด้านบนตามสถาบัน */
+        }
+
+        /* สไตล์ของรายการย่อย */
+        .dropdown-content a {
+            float: none;
+            color: #555;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ที่รายการย่อย */
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: #3498db;
+            padding-left: 20px; /* ขยับเล็กน้อยเพื่อความสวยงาม */
+        }
+
+        /* แสดงเมนูย่อยเมื่อเอาเมาส์ไปชี้ที่เมนูหลัก (Hover) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar1{
+             background-color: #fff;
+            overflow: hidden;
+            display: flex;
+        }
+        .dropdown2{
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown2 .dropbtn3 {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            padding: 14px 1px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        .dropbtn3:hover{
+          display: block;
+        }
