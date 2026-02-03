@@ -1,0 +1,312 @@
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #3498db;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-box .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+.service-link{
+    text-decoration: none;
+    background: rgb(67, 202, 255);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+.vob{
+    width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  font-size: 20;
+}
+.soon {
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.soon:hover {
+    transform: translateY(-10px);
+    
+}
+.soon.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.service-box a{
+    color: #333;
+    text-decoration: none;
+}
+
+        /* ตั้งค่าฟอนต์และการจัดวางพื้นฐาน */
+
+      
+        
+       
+       
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        /* ตั้งค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+
+        /* ตั้งค่าฟอนต์และการจัดวางพื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* ส่วนของแถบเมนูหลัก */
+        .navbar {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            
+        }
+
+        /* สไตล์ของปุ่มเมนูหลัก */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: #2c3e50;
+            padding: 14px 25px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        /* ส่วนของเนื้อหาย่อย (Dropdown Content) - ซ่อนไว้ตอนแรก */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-top: 2px solid #3498db; /* เส้นสีแดงด้านบนตามสถาบัน */
+        }
+
+        /* สไตล์ของรายการย่อย */
+        .dropdown-content a {
+            float: none;
+            color: #555;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ที่รายการย่อย */
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: #3498db;
+            padding-left: 20px; /* ขยับเล็กน้อยเพื่อความสวยงาม */
+        }
+
+        /* แสดงเมนูย่อยเมื่อเอาเมาส์ไปชี้ที่เมนูหลัก (Hover) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar1{
+             background-color: #fff;
+            overflow: hidden;
+            display: flex;
+        }
+        .dropdown2{
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown2 .dropbtn3 {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            padding: 14px 1px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        .dropbtn3:hover{
+          display: block;
+        }
+
+         
