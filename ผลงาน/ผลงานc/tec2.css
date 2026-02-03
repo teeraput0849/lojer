@@ -1,0 +1,128 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } .sokw2 {
+  /* การจัดวางตำแหน่ง */
+  position: absolute; /* หรือใช้ fixed ถ้าอยากให้ปุ่มค้างอยู่แม้จะเลื่อนหน้าจอลงมา */
+  top: 20px;          /* ห่างจากขอบบน */
+  left: 20px;         /* ห่างจากขอบซ้าย */
+  font-size: 24px;
+    font-weight: 600;
+    color: #fdfdfd;
+  /* การตกแต่งรูปลักษณ์ */
+  padding: 12px 24px;
+  background-color: #007bff; /* สีน้ำเงิน */
+  color: white;              /* สีตัวอักษร */
+  text-decoration: none;     /* เอาเส้นใต้ลิงค์ออก */
+  border-radius: 50px;       /* ทำขอบมนแบบวงรี */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้นุ่มนวล */
+  transition: all 0.3s ease;  /* เพิ่ม animation เวลาเอาเมาส์ไปวาง */
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) */
+.sokw2:hover {
+  background-color: #0056b3; /* สีเข้มขึ้นตอนชี้ */
+  transform: translateY(-2px); /* ปุ่มลอยขึ้นนิดนึง */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+:root {
+    --primary-color: #4b0082; /* ม่วงเข้ม */
+    --accent-color: #ffcc00;  /* เหลืองทอง */
+    --text-light: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    background: radial-gradient(circle, #1843ff 0%, #ce4747 100%);
+    color: var(--text-light);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* พื้นหลัง Matrix/Stars สไตล์ IT */
+.stars-container {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.2;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* --- Animations --- */
+
+/* 1. รูปภาพขยับขึ้นลง (Floating) */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* 2. การขยายตัวของรางวัล (Pulse) */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+}
+
+/* 3. เลื่อนขึ้นเมื่อโหลด (Slide Up) */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: slideUp 1s ease-out; }
+
+.slide-up { animation: slideUp 1.2s ease-out; }
+
+.image-wrapper {
+    position: relative;
+    margin: 30px auto;
+    width: 600%;
+    max-width: 600px;
+    animation: float 4s ease-in-out infinite; /* ใส่ Animation ให้รูปขยับ */
+}
+
+.main-photo {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+.award-badge {
+    background: var(--accent-color);
+    color: #000;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 20px 0;
+    animation: pulse 2s infinite; /* รางวัลเต้นได้ */
+}
+
+h1 { color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; }
+.subtitle { font-size: 1.2rem; opacity: 0.9; }
+.category { color: #00d4ff; } /* สีฟ้าเทคๆ */
