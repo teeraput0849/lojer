@@ -1,0 +1,260 @@
+
+
+
+
+
+/* ตั้งค่าพื้นฐาน */
+
+
+.container {
+   margin: auto;
+    max-width: 1000px;
+    width: 50%;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: #00d4ff; /* สีฟ้านีออน */
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.header-section p {
+    color: #888;
+    margin-bottom: 50px;
+}
+
+/* ระบบ Grid 2 แถว */
+.personnel-grid {
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+    gap: 30px;
+}
+
+/* สไตล์การ์ดบุคลากร */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    opacity: 0; /* ซ่อนไว้ก่อนทำ Animation */
+    transform: translateY(30px); /* เลื่อนลงไปข้างล่างรอการโชว์ */
+    animation: fadeInUp 0.8s ease forwards; /* เรียกใช้ Animation */
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปวาง (Hover) */
+.card:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.image-box {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ให้รูปพอดีกรอบ */
+    filter: grayscale(30%); /* ปรับสีให้ออกแนวขรึมๆ แบบ IT */
+    transition: 0.4s;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.info h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.info p {
+    color: #00d4ff;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* --- ส่วนของ Animation --- */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* หน่วงเวลาให้รูปค่อยๆ ขึ้นทีละใบ (Staggered Animation) */
+.card-1 { animation-delay: 0.2s; }
+.card-2 { animation-delay: 0.4s; }
+.card-3 { animation-delay: 0.6s; }
+.card-4 { animation-delay: 0.8s; }
+
+/* ปรับแต่งให้รองรับมือถือ (เหลือแถวละ 1 คน) */
+@media (max-width: 600px) {
+    .personnel-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* ตั้งค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+
+        /* ตั้งค่าฟอนต์และการจัดวางพื้นฐาน */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+
+        /* ส่วนของแถบเมนูหลัก */
+        .navbar {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            
+        }
+
+        /* สไตล์ของปุ่มเมนูหลัก */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: #2c3e50;
+            padding: 14px 25px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        /* ส่วนของเนื้อหาย่อย (Dropdown Content) - ซ่อนไว้ตอนแรก */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-top: 2px solid #3498db; /* เส้นสีแดงด้านบนตามสถาบัน */
+        }
+
+        /* สไตล์ของรายการย่อย */
+        .dropdown-content a {
+            float: none;
+            color: #555;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-bottom: none;
+            transition: 0.3s;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ที่รายการย่อย */
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: #3498db;
+            padding-left: 20px; /* ขยับเล็กน้อยเพื่อความสวยงาม */
+        }
+
+        /* แสดงเมนูย่อยเมื่อเอาเมาส์ไปชี้ที่เมนูหลัก (Hover) */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar1{
+             background-color: #fff;
+            overflow: hidden;
+            display: flex;
+        }
+        .dropdown2{
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown2 .dropbtn3 {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            padding: 14px 1px;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        .dropbtn3:hover{
+          display: block;
+        }
